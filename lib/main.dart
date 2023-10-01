@@ -11,13 +11,13 @@ import 'widgets/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  setPathUrlStrategy();
-  runApp(VxState(store: MyStore(), child: MyApp()));
+   setPathUrlStrategy();
+   runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     var vxNavigator = VxNavigator(routes: {
       "/": (_, __) => MaterialPage(child: HomePage()),
       MyRoutes.homeRoute: (_, __) => MaterialPage(child: HomePage()),
@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
             .catalog
             .getById(int.parse(uri.queryParameters["id"]));
         return MaterialPage(
-            child: HomeDetailPage(
-          catalog: catalog,
-        ));
+          child: HomeDetailPage(
+            catalog: catalog,
+          ));
       },
       MyRoutes.loginRoute: (_, __) => MaterialPage(child: LoginPage()),
       MyRoutes.signupRoute: (_, __) => MaterialPage(child: SignUpPage()),
@@ -45,10 +45,10 @@ class MyApp extends StatelessWidget {
       routerDelegate: vxNavigator,
       // initialRoute: MyRoutes.loginRoute,
       // routes: {
-      //   "/": (context) => LoginPage(),
-      //   MyRoutes.homeRoute: (context) => HomePage(),
-      //   MyRoutes.loginRoute: (context) => LoginPage(),
-      //   MyRoutes.cartRoute: (context) => CartPage(),
+      //  "/": (context) => LoginPage(),
+      //  MyRoutes.homeRoute: (context) => HomePage(),
+      //  MyRoutes.loginRoute: (context) => LoginPage(),
+      //  MyRoutes.cartRoute: (context) => CartPage(),
       // },
     );
   }

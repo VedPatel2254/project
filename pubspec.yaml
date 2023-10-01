@@ -17,8 +17,13 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+analyzer:
+  enable-experiment: non-nullable
+  
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.19.2 <3.7.3"
+
+{"name":"flutter_catalog","description":"","publish_to":"none","version":"1.0.0+1","analyzer":{"enable-experiment":"non-nullable"},"environment":{"sdk":">=2.19.2"},"dependencies":{"flutter":{"sdk":"flutter"},"cupertino_icons":"^1.0.1"},"dev_dependencies":{"flutter_test":{"sdk":"flutter"},"integration_test":{"sdk":"flutter"}},"flutter":{"uses-material-design":true}}
 
 dependencies:
   flutter:

@@ -43,13 +43,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routeInformationParser: VxInformationParser(),
       routerDelegate: vxNavigator,
-      // initialRoute: MyRoutes.loginRoute,
-      // routes: {
-      //  "/": (context) => LoginPage(),
-      //  MyRoutes.homeRoute: (context) => HomePage(),
-      //  MyRoutes.loginRoute: (context) => LoginPage(),
-      //  MyRoutes.cartRoute: (context) => CartPage(),
-      // },
+      initialRoute: MyRoutes.loginRoute,
+      routes: {
+        "/": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage(),
+      },
     );
   }
 }
